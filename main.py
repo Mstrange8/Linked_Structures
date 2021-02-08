@@ -16,16 +16,11 @@ def main():
 
     for course in courses:
         course = course.strip().split(',')
-        my_list.insert(Course(course[0], course[1], course[2], course[3]))
+        my_list.insert(Course(int(course[0]), course[1], float(course[2]), float(course[3])))
 
-    print(my_list)
-    print("Current List: ({})".format(my_list.find_size()))
+    print("Current List: ({})".format(my_list.size()))
     print(my_list.__str__())
     print("Cumulative GPA: {:.3f}".format(my_list.calculate_gpa()))
-
-    my_list.is_sorted()
-    my_list.remove_all(1030)
-    print(my_list.__str__())
 
 
 if __name__ == "__main__":

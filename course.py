@@ -9,7 +9,7 @@
 class Course:
     """Creates class object containing course information"""
 
-    def __init__(self, _number=0, _name="", _credit=0.0, _grade=0.0, next=None):
+    def __init__(self, _number=0, _name="", _credit=0.0, _grade=0.0):
         if not isinstance(_number, int) or _number < 0 or not isinstance(_name, str) or \
                 not isinstance(_credit, float) or _credit < 0 or \
                 not isinstance(_grade, float) or _grade < 0:
@@ -18,7 +18,7 @@ class Course:
         self._name = _name
         self._credit = _credit
         self._grade = _grade
-        self.next = next
+        self.next = None
 
     def number(self):
         """retrieves course number as an integer"""
